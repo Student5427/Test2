@@ -1,7 +1,7 @@
 [![CI/CD GitHub Actions](https://github.com/Student5427/Test2/actions/workflows/python-app.yml/badge.svg)](https://github.com/Student5427/Test2/actions/workflows/python-app.yml)
 [![Coverage Status](https://coveralls.io/repos/github/Student5427/Test2/badge.svg?branch=main)](https://coveralls.io/github/Student5427/Test2?branch=main)
 [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=DenisTerehin_2laba&metric=alert_status)](https://sonarcloud.io/dashboard?id=DenisTerehin_2laba)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=DenisTerehin_2laba&metric=bugs)](https://sonarcloud.io/summary/new_code?id=DenisTerehin_2laba)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Student5427_Test2&metric=bugs)](https://sonarcloud.io/summary/new_code?id=Student5427_Test2)
 [![Code smells](https://sonarcloud.io/api/project_badges/measure?project=DenisTerehin_2laba&metric=code_smells)](https://sonarcloud.io/dashboard?id=DenisTerehin_2laba)
 
 # План тестирования:
