@@ -63,15 +63,15 @@ class TestMatrixOperations(unittest.TestCase):
         with self.assertRaises(ValueError):
             MatrixOperations.determinant(matrix)
 
-        def test_power_square_matrix(self):
-            matrix = Matrix(2, 2)
-            matrix.matrix = [[2, 1], [1, 2]]
+    def test_power_square_matrix(self):
+        matrix = Matrix(2, 2)
+        matrix.matrix = [[2, 1], [1, 2]]
 
-            result = MatrixOperations.power(matrix, 3)
-            expected_result = Matrix(2, 2)
-            expected_result.matrix = [[11, 8], [8, 11]]
+        result = MatrixOperations.power(matrix, 3)
+        expected_result = Matrix(2, 2)
+        expected_result.matrix = [[14, 13], [13, 14]]
 
-            self.assertEqual(result.matrix, expected_result.matrix)
+        self.assertEqual(result.matrix, expected_result.matrix)
 
     def test_power_non_square_matrix(self):
         matrix = Matrix(2, 3)
