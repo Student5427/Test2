@@ -63,6 +63,33 @@ class TestMatrixOperations(unittest.TestCase):
         with self.assertRaises(ValueError):
             MatrixOperations.determinant(matrix)
 
+        def test_power_square_matrix(self):
+            matrix = Matrix(2, 2)
+            matrix.matrix = [[2, 1], [1, 2]]
+
+            result = MatrixOperations.power(matrix, 3)
+            expected_result = Matrix(2, 2)
+            expected_result.matrix = [[11, 8], [8, 11]]
+
+            self.assertEqual(result.matrix, expected_result.matrix)
+
+    def test_power_non_square_matrix(self):
+        matrix = Matrix(2, 3)
+        matrix.matrix = [[2, 1, 3], [1, 2, 0]]
+
+        with self.assertRaises(ValueError):
+            MatrixOperations.power(matrix, 2)
+
+    def test_power_identity_matrix(self):
+        matrix = Matrix(2, 2)
+        matrix.matrix = [[1, 0], [0, 1]]
+
+        result = MatrixOperations.power(matrix, 5)
+        expected_result = Matrix(2, 2)
+        expected_result.matrix = [[1, 0], [0, 1]]
+
+        self.assertEqual(result.matrix, expected_result.matrix)
+
 # Интеграционные тесты
 class TestIntegrationMatrixOperations(unittest.TestCase):
     def test_multiply_matrices_and_scalar_multiply(self):
