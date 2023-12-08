@@ -139,7 +139,7 @@ def main():
                 continue
 
             try:
-                print("\nВведите степень")
+                print("\nВведите степень!")
                 try:
                     exp = int(input())
                 except ValueError as e:
