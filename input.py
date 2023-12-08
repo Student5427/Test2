@@ -36,6 +36,7 @@ def main():
         print("4. Транспонирование матрицы")
         print("5. Вычисление определителя матрицы")
         print("6. Вычисление обратной матрицы")
+        print("7. Возведение матрицы в степень")
         print("0. Выйти")
 
         choice = input("Введите номер операции: ")
@@ -44,7 +45,7 @@ def main():
             print("Программа завершена.")
             break
 
-        if choice not in ["1", "2", "3", "4", "5", "6"]:
+        if choice not in ["1", "2", "3", "4", "5", "6", "7"]:
             print("Неверный выбор операции. Попробуйте снова.")
             continue
 
@@ -130,6 +131,24 @@ def main():
                 result_inverse.display()
             except ValueError as e:
                 print(f"Ошибка!")
+            
+        elif choice == "7":
+            # Возведение матрицы в степень
+            if len(matrices) != 1:
+                print("Для вовзедения матрицы необходимо ввести только одну матрицу.")
+                continue
+
+            try:
+                print("\nВведите степень")
+                try:
+                    exp = int(input())
+                except ValueError as e:
+                    print(f"Ошибка!{e}")
+                result_inverse = MatrixOperations.power(matrices[0], exp)
+                print("\nРезультат вовзедения матрицы в степень:")
+                result_inverse.display()
+            except ValueError as e:
+                print(f"Ошибка!{e}")
 
 if __name__ == "__main__":
     main()

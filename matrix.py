@@ -21,6 +21,14 @@ class Matrix:
 
 class MatrixOperations:
     @staticmethod
+    def power(matrix, exponent):
+        if matrix.rows != matrix.cols:
+            raise ValueError("Матрица должна быть квадратной для возведения в степень.")
+
+        result = Matrix(matrix.rows, matrix.cols)
+        result.matrix = np.linalg.matrix_power(matrix.matrix, exponent).tolist()
+        return result
+    @staticmethod
     def add_matrices(matrix1, matrix2):
         matrix1._check_dimensions(matrix2, "сложение матриц")
         result = Matrix(matrix1.rows, matrix1.cols)
