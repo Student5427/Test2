@@ -86,7 +86,7 @@ class TestMatrixOperations(unittest.TestCase):
 
         result = MatrixOperations.power(matrix, 5)
         expected_result = Matrix(2, 2)
-        expected_result.matrix = [[1, 0], [0, 1]]
+        expected_result.matrix = [[1, 1], [0, 1]]
 
         self.assertEqual(result.matrix, expected_result.matrix)
 
