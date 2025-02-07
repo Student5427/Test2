@@ -110,4 +110,4 @@ class TestIntegrationMatrixOperations(unittest.TestCase):
         result_determinant = MatrixOperations.determinant(result_transpose)
         self.assertEqual(result_determinant, 0)
 
-#Коммент, чтобы снова запулить
+#Коммент для изменений в коде
